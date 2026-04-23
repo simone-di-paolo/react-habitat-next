@@ -1,7 +1,7 @@
 ReactHabitat comes with a `createBootstrapper` method for our es5 users.
 
 ```javascript
-var ReactHabitat = require('react-habitat');
+var ReactHabitat = require('react-habitat-next');
 var SomeReactComponent = require('./SomeReactComponent');
 var AnotherReactComponent = require('./AnotherReactComponent');
 

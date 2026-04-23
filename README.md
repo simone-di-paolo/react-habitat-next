@@ -1,10 +1,18 @@
-![Deloitte Digital](https://raw.githubusercontent.com/DeloitteDigitalAPAC/react-habitat/master/dd-logo.png)
+# React Habitat Next
 
-# React Habitat ![Build Status](https://travis-ci.org/DeloitteDigitalAPAC/react-habitat.svg?branch=master) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-**v1.0 Released** 🎉 - Please see [migration guides](https://github.com/DeloitteDigitalAPAC/react-habitat/wiki).
+> ⚠️ **Unofficial fork.** This is a community-maintained modernization of
+> [DeloitteDigitalAPAC/react-habitat](https://github.com/DeloitteDigitalAPAC/react-habitat)
+> (Copyright © 2017, Deloitte Digital, BSD-3-Clause). This project is **not
+> affiliated with, endorsed by, or sponsored by Deloitte Digital**. It exists to
+> maintain compatibility with modern React and its surrounding ecosystem. All
+> trademarks remain the property of their respective owners.
+>
+> Maintained by **Simone Di Paolo**. Original design and implementation credit
+> goes to the Deloitte Digital Australia team and the original contributors.
 
-> *Looking for the [v0.4 docs](https://github.com/DeloitteDigitalAPAC/react-habitat/tree/4e82be35a1d9b5f2c95d7957f277dbbd1ca89b64#react-habitat-)?*
+> 📝 For historical reference, see the [original README](https://github.com/DeloitteDigitalAPAC/react-habitat#readme) and [v0.4 docs](https://github.com/DeloitteDigitalAPAC/react-habitat/tree/4e82be35a1d9b5f2c95d7957f277dbbd1ca89b64#react-habitat-).
 
 ## React Habitat <3 Your CMS
 
@@ -77,10 +85,10 @@ framework isn't really going to bring many benefits to you. However, you are def
   - [Bootstrapper lifecycle events](#bootstrapper-lifecycle-events)
   - [Unmount react Habitats](#unmount-react-habitats)
   - [Disposing the container](#disposing-the-container)
-- [Examples](https://github.com/DeloitteDigitalAPAC/react-habitat/tree/master/examples)
+- [Examples](https://github.com/simone-di-paolo/react-habitat-next/tree/master/examples)
 - [Contribute](#want-to-contribute)
 - [License information](#license-bsd-3-clause)
-- [Change log](https://github.com/DeloitteDigitalAPAC/react-habitat/blob/master/CHANGELOG.md)
+- [Change log](https://github.com/simone-di-paolo/react-habitat-next/blob/master/CHANGELOG.md)
 
 
 ## Compatibility
@@ -100,7 +108,7 @@ We highly recommend you use something like [WebPack](https://webpack.github.io/)
 
 Install with [NPM](http://npmjs.com/)
 
-`npm install --save react-habitat`
+`npm install react-habitat-next`
 
 This assumes that you’re using a package manager with a module bundler like [Webpack](http://webpack.github.io) or [Rollup](https://rollupjs.org/).
 
@@ -142,7 +150,7 @@ So for our sample application, we need to register all of our components to be e
 We also need to build and store the container so it can be used to resolve components later
 
 ```javascript
-import ReactHabitat                 from 'react-habitat';
+import ReactHabitat                 from 'react-habitat-next';
 import SomeReactComponent           from './SomeReactComponent';
 
 class MyApp extends ReactHabitat.Bootstrapper {
@@ -171,13 +179,13 @@ By default ReactHabitat ships with a plain ReactDOM factory.
 
 **If you are using Redux**
 
-You will need to use a different factory. Please install & configure the [react-habitat-redux library](https://github.com/DeloitteDigitalAPAC/react-habitat-redux). Then continue with step 2 below.
+You will need to use a different factory. Please install & configure the [react-habitat-redux-next library](https://github.com/simone-di-paolo/react-habitat-redux-next). Then continue with step 2 below.
 
 Alternatively learn how to [write and use your own custom factory](#writing-and-using-custom-factories).
 
 **If you are using TypeScript**
 
-You will need to import ReactHabitat using `import * as ReactHabitat from 'react-habitat'` syntax in order to avoid 'module has no default export' error.
+You will need to import ReactHabitat using `import * as ReactHabitat from 'react-habitat-next'` syntax in order to avoid 'module has no default export' error.
 
 #### 2. Application execution - resolve your components
 
@@ -396,9 +404,9 @@ container
 
 ## Writing and using custom factories
 
-A factory is used to define how components are injected into the DOM. The [default factory](https://github.com/DeloitteDigitalAPAC/react-habitat/blob/master/src/factories/ReactDomFactory.js) is simple wrapper of ReactDOM.
+A factory is used to define how components are injected into the DOM. The [default factory](https://github.com/simone-di-paolo/react-habitat-next/blob/master/src/factories/ReactDomFactory.js) is a simple wrapper of ReactDOM.
 
-Where as the [ReactHabitatRedux one](https://github.com/DeloitteDigitalAPAC/react-habitat-redux/blob/master/src/ReduxDomFactory.js) wraps Components in a React Redux Provider. You can write custom factories do what ever you want with components and control how they are added to the dom.
+Whereas the [ReactHabitatReduxNext one](https://github.com/simone-di-paolo/react-habitat-redux-next/blob/master/src/ReduxDomFactory.js) wraps Components in a React Redux Provider. You can write custom factories to do whatever you want with components and control how they are added to the DOM.
 
 A factory is simply a plain javascript class that must have two methods implemented `inject` and `dispose`.
 
@@ -862,42 +870,19 @@ Please don't hesitate to raise an issue through GitHub or open a pull request to
 
 * @jenna_salau
 
-## Who is Deloitte Digital?
+## Credits
 
-**Part Business. Part Creative. Part Technology. One hundred per cent digital.**
+This project is an unofficial fork of [DeloitteDigitalAPAC/react-habitat](https://github.com/DeloitteDigitalAPAC/react-habitat), originally authored by **Deloitte Digital Australia** and its contributors. All design and implementation credit for the original library goes to them — see the [original repository's contributors page](https://github.com/DeloitteDigitalAPAC/react-habitat/graphs/contributors) for the full list.
 
-Pioneered in Australia, Deloitte Digital is committed to helping clients unlock the business value of emerging technologies. We provide clients with a full suite of digital services, covering digital strategy, user experience, content, creative, engineering and implementation across mobile, web and social media channels.
+The fork is maintained by **Simone Di Paolo** as an independent, community-maintained continuation, modernized for compatibility with current React, Redux and build-tooling versions. It is **not affiliated with, endorsed by, or sponsored by Deloitte Digital**.
 
-[http://www.deloittedigital.com/au](http://www.deloittedigital.com/au)
+## License (BSD-3-Clause)
 
-## LICENSE (BSD-3-Clause)
-Copyright (C) 2017, Deloitte Digital. All rights reserved.
+This project is licensed under the BSD 3-Clause License.
 
-React Habitat can be downloaded from: https://github.com/DeloitteDigitalAPAC/react-habitat
+- Portions Copyright © 2026, Simone Di Paolo.
+- Original work Copyright © 2017, Deloitte Digital. All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this
-list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.
-
-* Neither the name of the copyright holder nor the names of its contributors
-may be used to endorse or promote products derived from this software without
-specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+See [LICENCE.md](./LICENCE.md) for the full license text and the unofficial-fork notice.
 
 **[⬆ back to top](#table-of-contents)**

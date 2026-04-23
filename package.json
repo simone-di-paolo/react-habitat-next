@@ -1,11 +1,11 @@
 {
-  "name": "react-habitat",
-  "version": "1.0.1",
-  "description": "A React DOM Bootstrapper designed to harmonise a hybrid application",
+  "name": "react-habitat-next",
+  "version": "0.1.0",
+  "description": "A React DOM Bootstrapper designed to harmonise a hybrid application — unofficial modernized fork of react-habitat",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DeloitteDigitalAPAC/react-habitat.git"
+    "url": "git+https://github.com/simone-di-paolo/react-habitat-next.git"
   },
   "keywords": [
     "react",
@@ -23,12 +23,15 @@
     "joomla",
     "magento"
   ],
-  "author": "Deloitte Digital Australia (http://deloittedigital.com.au)",
+  "author": "Simone Di Paolo",
+  "contributors": [
+    "Deloitte Digital Australia (https://deloittedigital.com.au) — original author of react-habitat"
+  ],
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/DeloitteDigitalAPAC/react-habitat/issues"
+    "url": "https://github.com/simone-di-paolo/react-habitat-next/issues"
   },
-  "homepage": "https://github.com/DeloitteDigitalAPAC/react-habitat#readme",
+  "homepage": "https://github.com/simone-di-paolo/react-habitat-next#readme",
   "typescript": {
     "definition": "index.d.ts"
   },
